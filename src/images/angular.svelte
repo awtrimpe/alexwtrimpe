@@ -1,4 +1,3 @@
-<!-- Angular -->
 <svg viewBox="0 0 256 270" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
 	<path
 		d="M127.606.341L.849 44.95 20.88 211.022l106.86 58.732 107.412-59.528L255.175 44.16 127.606.341z"

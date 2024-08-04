@@ -1,0 +1,126 @@
+:root {
+	--licorice: #14080e;
+	--english-violet: #49475b;
+	--cadet-gray: #799496;
+	--olivine: #acc196;
+	--vanilla: #e9eb9e;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--cadet-gray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--english-violet);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--licorice);
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+a {
+	color: var(--olivine);
+}
+
+a:hover {
+	color: var(--cadet-gray);
+}
+
+button {
+	background-color: var(--english-violet);
+	box-shadow: var(--vanilla) 0.5px 0px 1.5px 1px;
+	border-radius: 10px;
+	color: white;
+	height: 2em;
+	font-weight: 600;
+	border: none;
+	padding: 5px 10px;
+}
+
+body {
+	background-color: #000000;
+	background-image: linear-gradient(315deg, #000000 0%, #414141 99%);
+	color: white;
+	font-family: Arial, sans-serif;
+}
+
+main {
+	border-radius: 15px;
+	margin: 2em 1em;
+	padding: 2em;
+}
+
+main section {
+	background-color: var(--licorice);
+	border-radius: 1em;
+	padding: 1em 2em;
+	margin: 1em 0;
+}
+
+dialog {
+	background-color: var(--licorice);
+	color: #fff;
+	width: 50vw;
+	height: 50vh;
+	position: fixed;
+	top: 24%;
+	overflow-y: auto;
+}
+
+dialog[open] {
+	animation: myFadeIn 0.5s ease-in-out normal;
+}
+
+dialog .close-button {
+	display: flex;
+	justify-content: flex-end;
+}
+
+dialog .close-button button {
+	background-color: var(--olivine);
+	border: none;
+	border-radius: 50%;
+	color: var(--licorice);
+	height: 30px;
+	width: 30px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes myFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	main {
+		padding: 0px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	main {
+		max-width: 80em;
+		margin: 2em auto;
+	}
+}

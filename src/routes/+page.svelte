@@ -34,6 +34,9 @@
 		Typescript,
 		WordPress
 	];
+
+	let dialog: HTMLDialogElement;
+	let dialog2: HTMLDialogElement;
 	const contacts = [
 		{
 			link: 'https://www.linkedin.com/in/alexwtrimpe/',
@@ -47,26 +50,63 @@
 		}
 	];
 	const year = new Date().getFullYear();
-
-	let dialog: HTMLDialogElement;
+	const dialogs = [
+		{
+			title: 'Background',
+			component: ''
+		},
+		{
+			title: 'Expertise',
+			component: ''
+		},
+		{
+			title: 'About Site',
+			component: ''
+		},
+		{
+			title: 'Contact',
+			component: ''
+		}
+	];
 
 	onMount(async () => {
 		document.title = 'Alex W. Trimpe';
 		dialog = document.getElementById('confirmation-dialog') as HTMLDialogElement;
+		dialog2 = document.getElementById('confirmation-dialog2') as HTMLDialogElement;
 	});
 
 	// Show the dialog when clicking "Delete everything"
-	const showDialogClick = () => {
-		dialog.show();
+	const showDialogClick = (diag: HTMLDialogElement): null => {
+		diag.show();
+		return null;
 	};
 
-	const closeClick = () => {
-		dialog.close();
+	const closeClick = (diag: HTMLDialogElement): null => {
+		diag.close();
+		return null;
 	};
 </script>
 
 <body>
-	<h1 id="title">alexwtrimpe.com</h1>
+	<div class="title-icon"></div>
+	<span class="title-line">
+		<span></span>
+		<span></span>
+	</span>
+	<div class="title">
+		<hr />
+		<h1>Alex W Trimpe</h1>
+		<hr />
+	</div>
+	<span class="title-line">
+		<span></span>
+		<span></span>
+	</span>
+	<span class="links">
+		{#each dialogs as dialog}
+			<div>{dialog.title}</div>
+		{/each}
+	</span>
 	<main>
 		<section>
 			<h2>Background</h2>
@@ -95,6 +135,14 @@
 					{/each}
 				</div>
 			</div>
+
+			<button on:click={() => showDialogClick(dialog)}>Read More</button>
+			<dialog id="confirmation-dialog">
+				<div class="close-button">
+					<button on:click={closeClick(dialog)}>&#10006;</button>
+				</div>
+				<p>Hello world!</p>
+			</dialog>
 		</section>
 
 		<section>
@@ -111,10 +159,10 @@
 				<li>Favored CSS over JS</li>
 				<li>Opted for client-side rendering</li>
 			</ul>
-			<button on:click={() => showDialogClick()}>Read More</button>
-			<dialog id="confirmation-dialog">
+			<button on:click={() => showDialogClick(dialog2)}>Read More</button>
+			<dialog id="confirmation-dialog2">
 				<div class="close-button">
-					<button on:click={closeClick}>&#10006;</button>
+					<button on:click={closeClick(dialog2)}>&#10006;</button>
 				</div>
 				<p>
 					This site was made using Svelte structured for client-side only. The reason for
@@ -168,13 +216,6 @@
 </footer>
 
 <style>
-	@import './style.css';
-
-	#title {
-		margin: 0;
-		text-align: center;
-	}
-
 	div.technologies {
 		overflow: hidden;
 		width: 100%;

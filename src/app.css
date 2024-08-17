@@ -1,0 +1,196 @@
+/* Fonts */
+@font-face {
+	font-style: normal;
+	font-weight: 200;
+	src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+	font-family: "Roboto";
+}
+
+:root {
+	--gunmetal: #16252bff;
+	--gunmetal-2: #132329ff;
+	--outer-space: #475a5eff;
+	--paynes-gray: #516568ff;
+	--silver: #b1b7b9ff;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--gunmetal-2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--outer-space);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--gunmetal);
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+a {
+	color: var(--paynes-gray);
+}
+
+a:hover {
+	color: var(--outer-space);
+}
+
+button {
+	box-shadow: var(--silver) 0.5px 0px 1.5px 1px;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--gunmetal-2);
+	padding: 5px 10px;
+	height: 2em;
+	color: white;
+	font-weight: 600;
+}
+
+body {
+	background-image: linear-gradient(
+		315deg,
+		var(--paynes-gray) 0%,
+		var(--gunmetal-2) 99%
+	);
+	background-color: var(--paynes-gray);
+	color: var(--silver);
+	font-family: "Roboto", sans-serif;
+}
+
+main {
+	margin: 2em 1em;
+	border-radius: 15px;
+	padding: 0 2em;
+}
+
+main section {
+	margin: 1em 0;
+	border-radius: 1em;
+	background-color: var(--gunmetal);
+	padding: 1em 2em;
+}
+
+dialog {
+	position: fixed;
+	top: 24%;
+	background-color: var(--gunmetal);
+	width: 50vw;
+	height: 50vh;
+	overflow-y: auto;
+	color: #fff;
+}
+
+dialog[open] {
+	animation: myFadeIn 0.5s ease-in-out normal;
+}
+
+dialog .close-button {
+	display: flex;
+	justify-content: flex-end;
+}
+
+dialog .close-button button {
+	border: none;
+	border-radius: 50%;
+	background-color: var(--paynes-gray);
+	width: 30px;
+	height: 30px;
+	color: var(--gunmetal);
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-icon {
+	margin: auto;
+	border: solid 1px var(--silver);
+	border-radius: 50%;
+	width: 8em;
+	height: 8em;
+}
+
+.title {
+	margin: auto;
+	width: 60%;
+}
+
+.title h1 {
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.title-line {
+	display: flex;
+	justify-content: center;
+	height: 3em;
+}
+
+.title-line span:first-child {
+	border-right: 1px solid var(--silver);
+}
+
+.title > hr {
+	border-color: var(--silver);
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	height: 0.5px;
+}
+
+.title > hr:first-of-type {
+	margin-top: 0;
+}
+
+.title > hr:last-of-type {
+	margin-bottom: 0px;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.links div {
+	display: inline-flex;
+	flex-direction: row;
+	border: solid 0.5px var(--silver);
+	padding: 1em;
+}
+
+@keyframes myFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	main {
+		padding: 0px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	main {
+		margin: 2em auto;
+		max-width: 80em;
+	}
+}

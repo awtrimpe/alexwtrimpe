@@ -39,11 +39,12 @@ button {
 }
 
 a {
-	color: var(--paynes-gray);
+	transition: color 0.1s ease-in-out;
+	color: rgba(177, 183, 185, 0.897);
 }
 
 a:hover {
-	color: var(--outer-space);
+	color: var(--paynes-gray);
 }
 
 body {
@@ -69,7 +70,6 @@ main {
 
 dialog {
 	position: fixed;
-	top: 24%;
 	background-color: var(--gunmetal);
 	width: 50vw;
 	height: 50vh;
@@ -182,6 +182,16 @@ footer {
 @media only screen and (max-width: 600px) {
 	main {
 		padding: 0px;
+	}
+
+	dialog {
+		width: 90vw;
+		height: 90vh;
+	}
+
+	dialog .close-button {
+		position: fixed;
+		right: 3vw;
 	}
 }
 

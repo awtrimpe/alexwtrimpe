@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
+	import { clickOutside} from '../services/outside_click';
 
 	export let dialog: HTMLDialogElement;
 
@@ -21,8 +22,10 @@
 </script>
 
 <dialog bind:this={dialog} on:close>
-	<div class="close-button">
-		<button on:click={closeClick(dialog)}>&#10006;</button>
-	</div>
-	<slot />
+	<span use:clickOutside on:click_outside="{closeClick(dialog)}">
+		<div class="close-button">
+			<button on:click={closeClick(dialog)}>&#10006;</button>
+		</div>
+		<slot />
+	</span>
 </dialog>

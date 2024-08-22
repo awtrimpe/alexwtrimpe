@@ -30,6 +30,8 @@
 	.contact {
 		display: flex;
 		gap: 1em;
+		width: 100%;
+		justify-content: center;
 	}
 
 	.contact .icon {
@@ -39,7 +41,7 @@
 		text-decoration: none;
 		color: white;
 		transition: all 0.3s ease-in-out;
-		width: 6em;
+		width: 8em;
 	}
 
 	.contact .icon:hover {

@@ -46,39 +46,25 @@ a:hover {
 	color: var(--outer-space);
 }
 
-button {
-	box-shadow: var(--silver) 0.5px 0px 1.5px 1px;
-	border: none;
-	border-radius: 10px;
-	background-color: var(--gunmetal-2);
-	padding: 5px 10px;
-	height: 2em;
-	color: white;
-	font-weight: 600;
-}
-
 body {
+	margin: 0px;
 	background-image: linear-gradient(
 		315deg,
 		var(--paynes-gray) 0%,
 		var(--gunmetal-2) 99%
 	);
 	background-color: var(--paynes-gray);
+	height: 100vh;
 	color: var(--silver);
 	font-family: "Roboto", sans-serif;
 }
 
 main {
-	margin: 2em 1em;
-	border-radius: 15px;
-	padding: 0 2em;
-}
-
-main section {
-	margin: 1em 0;
-	border-radius: 1em;
-	background-color: var(--gunmetal);
-	padding: 1em 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 85%;
 }
 
 dialog {
@@ -116,6 +102,9 @@ footer {
 }
 
 .title-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: auto;
 	border: solid 1px var(--silver);
 	border-radius: 50%;
@@ -123,9 +112,13 @@ footer {
 	height: 8em;
 }
 
+.title-icon svg {
+	width: 7em;
+	height: 7em;
+}
+
 .title {
-	margin: auto;
-	width: 60%;
+	width: 100%;
 }
 
 .title h1 {
@@ -166,11 +159,15 @@ footer {
 	align-items: center;
 }
 
-.links div {
+.links button {
 	display: inline-flex;
 	flex-direction: row;
+	justify-content: center;
 	border: solid 0.5px var(--silver);
+	background-color: transparent;
 	padding: 1em;
+	width: 7em;
+	color: var(--silver);
 }
 
 @keyframes myFadeIn {

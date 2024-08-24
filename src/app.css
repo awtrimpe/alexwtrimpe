@@ -70,11 +70,13 @@ main {
 
 dialog {
 	position: fixed;
+	border: solid 1px var(--paynes-gray);
+	border-radius: 5px;
 	background-color: var(--gunmetal);
 	width: 50vw;
 	height: 50vh;
 	overflow-y: auto;
-	color: #fff;
+	color: var(--silver);
 }
 
 dialog[open] {
@@ -97,6 +99,15 @@ dialog .close-button button {
 
 footer {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex {
+	display: flex;
+}
+
+.fully-centered {
 	justify-content: center;
 	align-items: center;
 }
@@ -166,7 +177,7 @@ footer {
 	border: solid 0.5px var(--silver);
 	background-color: transparent;
 	padding: 1em;
-	width: 7em;
+	width: 7.1em;
 	color: var(--silver);
 }
 

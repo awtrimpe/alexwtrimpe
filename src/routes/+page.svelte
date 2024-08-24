@@ -1,36 +1,36 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import About from './dialogs/about.svelte'
-	import Background from './dialogs/background.svelte';
-	import Contact from './dialogs/contact.svelte';
-	import Dialog from './Dialog.svelte';
-	import Expertise from './dialogs/expertise.svelte';
-	import Logo from '../images/at-logo.svelte';
+	import { onMount } from "svelte";
+	import About from "./dialogs/about.svelte";
+	import Background from "./dialogs/background.svelte";
+	import Contact from "./dialogs/contact.svelte";
+	import Dialog from "./Dialog.svelte";
+	import Expertise from "./dialogs/expertise.svelte";
+	import Logo from "../images/at-logo.svelte";
 
 	let dialog: HTMLDialogElement;
 	let i = 0;
 	const year = new Date().getFullYear();
 	const dialogs = [
 		{
-			title: 'Background',
+			title: "Background",
 			component: Background,
 		},
 		{
-			title: 'Expertise',
+			title: "Expertise",
 			component: Expertise,
 		},
 		{
-			title: 'About Site',
+			title: "About Site",
 			component: About,
 		},
 		{
-			title: 'Contact',
+			title: "Contact",
 			component: Contact,
-		}
+		},
 	];
 
 	onMount(async () => {
-		document.title = 'Alex W. Trimpe';
+		document.title = "Alex W. Trimpe";
 	});
 </script>
 
@@ -54,7 +54,12 @@
 		</span>
 		<span class="links">
 			{#each dialogs as diag, index}
-				<button on:click={() => {dialog.showModal(); i=index}}>{diag.title}</button>
+				<button
+					on:click={() => {
+						dialog.showModal();
+						i = index;
+					}}>{diag.title}</button
+				>
 			{/each}
 		</span>
 	</div>

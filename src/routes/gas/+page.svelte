@@ -1,28 +1,43 @@
+<script lang="ts">
+	const stations = [
+		{
+			name: "BP",
+			code: "2416305297550713069",
+		},
+		{
+			name: "Marathon",
+			code: "11-Phone Number",
+		},
+		{
+			name: "Shell",
+			code: "Phone Number",
+		},
+		{
+			name: "Speedway",
+			code: "ALT ID - 432446359648",
+		},
+		{
+			name: "Pilot Flying J",
+			code: "9031 2164 9603 95",
+		},
+		{
+			name: "Mobil",
+			code: "Phone Number",
+		},
+	].sort((a, b) => (a.name > b.name ? 1 : -1));
+</script>
+
 <table>
 	<tr>
-		<th>Station</th>
+		<th>Name</th>
 		<th>Code</th>
 	</tr>
-	<tr>
-		<td>BP</td>
-		<td>2416305297550713069</td>
-	</tr>
-	<tr>
-		<td>Marathon</td>
-		<td>11-812-390-0942</td>
-	</tr>
-	<tr>
-		<td>Shell</td>
-		<td>812-390-0942</td>
-	</tr>
-	<tr>
-		<td>Speedway</td>
-		<td>ALT ID - 432446359648</td>
-	</tr>
-	<tr>
-		<td>Pilot Flying J</td>
-		<td>9031 2164 9603 95</td>
-	</tr>
+	{#each stations as station}
+		<tr>
+			<td>{station.name}</td>
+			<td>{station.code}</td>
+		</tr>
+	{/each}
 </table>
 
 <style>
@@ -30,7 +45,6 @@
 		margin: auto;
 		border-collapse: collapse;
 		width: 100%;
-		font-size: 32px;
 	}
 
 	td,
@@ -43,11 +57,11 @@
 	}
 
 	th {
-		color: white;
 		background-color: black;
+		color: white;
 	}
 
 	tr:nth-child(odd) {
-		background-color: #eeeeee;
+		background-color: var(--outer-space);
 	}
 </style>

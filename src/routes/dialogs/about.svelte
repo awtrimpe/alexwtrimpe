@@ -33,7 +33,9 @@
 	<li>
 		<a href="https://primedesignsystem.com/" target="_blank">Prime 6</a>
 	</li>
-	<li><a href="https://m3.material.io/" target="_blank">Material 3</a></li>
+	<li>
+		<a href="https://m3.material.io/" target="_blank">Material 3</a>
+	</li>
 	<li>
 		<a href="https://atlassian.design/" target="_blank">Atlassian Design</a>
 	</li>

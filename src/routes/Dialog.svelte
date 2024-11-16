@@ -32,6 +32,8 @@
 		<div class="close-button">
 			<button on:click={closeClick(dialog)}>&#10006;</button>
 		</div>
-		<slot />
+		<div class="dialog-content">
+			<slot />
+		</div>
 	</div>
 </dialog>

@@ -70,12 +70,12 @@ main {
 
 dialog {
 	position: fixed;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 	border: solid 1px var(--paynes-gray);
-	border-radius: 5px;
+	border-radius: 1em;
 	background-color: var(--gunmetal);
 	width: 50vw;
 	height: 50vh;
-	overflow-y: auto;
 	color: var(--silver);
 }
 
@@ -85,16 +85,32 @@ dialog[open] {
 
 dialog .close-button {
 	display: flex;
+	position: absolute;
+	right: 2em;
 	justify-content: flex-end;
 }
 
 dialog .close-button button {
+	position: absolute;
+	transition: all ease-in-out 0.3s;
 	border: none;
+	border: 1px solid var(--paynes-gray);
 	border-radius: 50%;
-	background-color: var(--paynes-gray);
+	background-color: var(--gunmetal-2);
 	width: 30px;
 	height: 30px;
+	color: var(--paynes-gray);
+}
+
+dialog .close-button button:hover {
+	background-color: var(--paynes-gray);
 	color: var(--gunmetal);
+}
+
+dialog .dialog-content {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
 }
 
 footer {
@@ -202,7 +218,13 @@ footer {
 
 	dialog .close-button {
 		position: fixed;
-		right: 3vw;
+		right: 5vw;
+	}
+
+	dialog .close-button button {
+		width: 40px;
+		height: 40px;
+		font-size: 25px;
 	}
 }
 

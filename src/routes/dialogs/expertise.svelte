@@ -48,6 +48,26 @@
 		{/each}
 	</div>
 </div>
+<p>
+	I am also a strong advocate of open source software. I have contributed to a
+	few open source projects, and am active in reporting issues with self-hosted
+	software.
+</p>
+<p>
+	With many years of experience, I am able to analyze problems, identify key
+	areas for improvement, and implement effective solutions that meet the needs
+	of stakeholders. With a passion for open-source software and a commitment to
+	contributing back to the community, I strive to continually improve my craft
+	through ongoing learning and experimentation.
+</p>
+<p>
+	As a full-stack software engineer, I bring together the best of both worlds:
+	front-end and back-end expertise. My proficiency in web technologies such as
+	Angular, Python, and TypeScript allows me to craft responsive user
+	interfaces that seamlessly integrate with robust server-side applications.
+	With experience in Express, Flask, Strapi, and WordPress, I can deploy
+	scalable solutions on cloud platforms like GCP and AWS.
+</p>
 
 <style>
 	div.technologies {

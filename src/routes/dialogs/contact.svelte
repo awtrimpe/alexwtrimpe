@@ -1,7 +1,13 @@
 <script lang="ts">
+	import Bluesky from "../../images/bluesky-logo.svelte";
 	import LinkedIn from "../../images/linkedin.svelte";
 	import Signal from "../../images/signal.svelte";
 	const contacts = [
+		{
+			link: "https://bsky.app/profile/awtrimpe.bsky.social",
+			image: Bluesky,
+			text: "awtrimpe.bsky.social",
+		},
 		{
 			link: "https://www.linkedin.com/in/alexwtrimpe/",
 			image: LinkedIn,
@@ -41,6 +47,7 @@
 		align-items: center;
 		transition: all 0.3s ease-in-out;
 		width: 8em;
+		height: 9em;
 		text-decoration: none;
 	}
 
@@ -72,6 +79,16 @@
 		40%,
 		60% {
 			transform: translate3d(4px, 0, 0);
+		}
+	}
+
+	@media only screen and (max-width: 1000px) {
+		.contact {
+			flex-direction: column;
+		}
+
+		.contact a {
+			margin: auto;
 		}
 	}
 </style>

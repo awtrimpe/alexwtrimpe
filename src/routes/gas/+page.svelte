@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Loves from "../../images/loves-rewards.svelte";
 	const stations = [
 		{
 			name: "BP",
@@ -24,6 +25,10 @@
 			name: "Mobil",
 			code: "Phone Number",
 		},
+		{
+			name: "Loves",
+			image: Loves,
+		},
 	].sort((a, b) => (a.name > b.name ? 1 : -1));
 </script>
 
@@ -35,7 +40,14 @@
 	{#each stations as station}
 		<tr>
 			<td>{station.name}</td>
-			<td>{station.code}</td>
+			<td>
+				{#if station.code}
+					{station.code}
+				{/if}
+				{#if station.image}
+					<svelte:component this={station.image}></svelte:component>
+				{/if}
+			</td>
 		</tr>
 	{/each}
 </table>
